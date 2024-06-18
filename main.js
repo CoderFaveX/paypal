@@ -1,5 +1,14 @@
 $(() => {
   let passed = false;
+  $(".password-toggle").click(() => {
+    if ($("#password").prop("type") == "text") {
+      $("#password").prop("type", "password");
+      $(".password-toggle").text("Hide");
+    } else {
+      $("#password").prop("type", "text");
+      $(".password-toggle").text("Show");
+    }
+  });
   const toggleDivs = (first) => {
     if (first) {
       $("main:nth-child(2)").css("display", "none");

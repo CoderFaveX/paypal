@@ -135,6 +135,15 @@ form main .input-hold input {
   font-weight: 500;
   transform: translateY(-40%);
 }
+form main .password-toggle {
+  width: 100% !important;
+  z-index: 4;
+  font-weight: 500;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+  color: rgb(100, 100, 202);
+}
 form main .input-hold-focus {
   border: 2px solid rgb(100, 100, 202);
   outline: 6px solid #d9d9d9;
