@@ -153,6 +153,10 @@ form {
           color: $accent-blue;
         }
       }
+      &:disabled {
+        background: rgba(100, 100, 202, 0.733);
+        &:hover { background: rgba(100, 100, 202, 0.733); }
+      }
       @include media(380px) { font-size: 15px; }
     }
     .or {

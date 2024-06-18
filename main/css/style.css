@@ -182,6 +182,12 @@ form main button:last-child:hover {
   border-color: rgb(100, 100, 202);
   color: rgb(100, 100, 202);
 }
+form main button:disabled {
+  background: rgba(100, 100, 202, 0.733);
+}
+form main button:disabled:hover {
+  background: rgba(100, 100, 202, 0.733);
+}
 @media screen and (max-width: 380px) {
   form main button {
     font-size: 15px;

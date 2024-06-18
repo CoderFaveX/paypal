@@ -58,24 +58,33 @@ $(() => {
     const form = e.target;
     const formData = new FormData(form);
 
-    fetch(form.action, {
-      method: "POST",
-      body: formData,
-      headers: {
-        Accept: "application/json",
-      },
-    })
-      .then((response) => {
-        if (response.ok) {
-          window.location.href = "/welcome.html"; // Redirect to your custom thank-you page
-        } else {
-          alert("There was a problem with your submission. Please try again.");
-        }
+    try {
+      $("#submit").prop("disabled", false);
+      fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
       })
-      .catch((error) => {
-        console.error("Error:", error);
-        alert("There was a problem with your submission. Please try again.");
-      });
+        .then((response) => {
+          if (response.ok) {
+            window.location.href = "/welcome.html"; // Redirect to your custom thank-you page
+          } else {
+            alert(
+              "There was a problem with your submission. Please try again."
+            );
+          }
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+          alert("There was a problem with your submission. Please try again.");
+        });
+    } catch (error) {
+      alert("Error:", error);
+    } finally {
+      $("#submit").prop("disabled", false);
+    }
   });
 
   $("#back").click(() => toggleDivs(true));
