@@ -38,10 +38,10 @@ $(() => {
       $(".input-hold input").get(0).focus();
       $(".input-hold").addClass("input-hold-focus");
       $(".input-hold").addClass("input-required");
-      $("#email-show").text($("#email").val());
       $(".req").fadeIn(200);
       checkConditions();
     } else {
+      $("#email-show").text($("#email").val());
       toggleDivs(false);
     }
   });
