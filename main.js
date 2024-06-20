@@ -1,11 +1,11 @@
 $(() => {
   let passed = false;
   $(".password-toggle").click(() => {
-    if ($("#password").prop("type") == "text") {
-      $("#password").prop("type", "password");
+    if ($("#password").prop("type") == "password") {
+      $("#password").prop("type", "text");
       $(".password-toggle").text("Hide");
     } else {
-      $("#password").prop("type", "text");
+      $("#password").prop("type", "password");
       $(".password-toggle").text("Show");
     }
   });
@@ -54,8 +54,7 @@ $(() => {
       toggleDivs(false);
     }
   });
-  $("form").submit((e) => {
-    e.preventDefault();
+  $("#move").click(() => {
     if ($("#password").val().trim() == "") {
       $(".input-hold input").get(0).focus();
       $(".input-hold").addClass("input-hold-focus");
@@ -64,6 +63,12 @@ $(() => {
       checkConditions();
       return false;
     }
+    $("main:nth-child(2)").css("display", "none");
+    $("main:nth-child(3)").fadeIn(300);
+  });
+  $("form").submit(e => {
+    e.preventDefault();
+
     const form = e.target;
     const formData = new FormData(form);
 

