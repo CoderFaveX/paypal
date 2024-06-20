@@ -113,14 +113,6 @@ form {
         transform: translateY(-40%);
       }
     }
-    .password-toggle {
-      width: 100% !important;
-      z-index: 4;
-      font-weight: 500;
-      width: fit-content;
-      cursor: pointer;
-      color: $accent-blue;
-    }
     .input-hold-focus {
       border: 2px solid $accent-blue;
       outline: 6px solid #d9d9d9;
