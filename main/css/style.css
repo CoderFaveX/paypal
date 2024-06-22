@@ -23,13 +23,13 @@
 *::after {
   margin: 0;
   padding: 0;
+  font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
   display: grid;
   place-content: center;
   height: 100vh;
-  font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 @media screen and (max-width: 500px) {
   body {
@@ -96,6 +96,29 @@ form main .action-col #back {
   font-weight: 600;
   color: rgb(100, 100, 202);
 }
+form main .flex-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+form main .toggle_password {
+  font-weight: 500;
+  padding: 0.5rem;
+  border: 1px solid #aaa;
+  background: rgb(100, 100, 202);
+  color: #FFF;
+  cursor: pointer;
+  display: none;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+form main .toggle_password::-moz-selection {
+  background: yellowgreen;
+}
+form main .toggle_password::selection {
+  background: yellowgreen;
+}
 form main .input-hold {
   display: flex;
   flex-direction: column;
@@ -108,6 +131,7 @@ form main .input-hold {
   padding: 0.5rem;
   border-radius: 5px;
   cursor: text;
+  z-index: 3;
 }
 form main .input-hold:hover {
   border-color: rgb(100, 100, 202);

