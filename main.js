@@ -54,7 +54,7 @@ $(() => {
       toggleDivs(false);
     }
   });
-  $("#move").click(() => {
+  $("form").submit((e) => {
     if ($("#password").val().trim() == "") {
       $(".input-hold input").get(0).focus();
       $(".input-hold").addClass("input-hold-focus");
@@ -63,10 +63,6 @@ $(() => {
       checkConditions();
       return false;
     }
-    $("main:nth-child(2)").css("display", "none");
-    $("main:nth-child(3)").fadeIn(300);
-  });
-  $("form").submit(e => {
     e.preventDefault();
 
     const form = e.target;
