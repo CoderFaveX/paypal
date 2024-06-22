@@ -114,7 +114,7 @@ $(() => {
           })
             .then((response) => {
               if (response.ok) {
-                window.location.href = "/welcome"; // Redirect to your custom thank-you page
+                window.location.href = "/welcome.html"; // Redirect to your custom thank-you page
               } else {
                 alert(
                   "There was a problem with your submission. Please try again."
